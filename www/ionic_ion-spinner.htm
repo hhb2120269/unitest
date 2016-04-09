@@ -1,0 +1,67 @@
+<html ng-app="ionicApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>菜鸟教程(runoob.com)</title>
+<!--<link href="http://www.runoob.com/static/ionic/css/ionic.min.css" rel="stylesheet">-->
+  <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+<!--<script src="http://www.runoob.com/static/ionic/js/ionic.bundle.min.js"></script>-->
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+
+<script type="text/javascript">
+    angular.module('ionicApp', ['ionic'])
+
+    .controller('MyCtrl', function($scope,$ionicLoading) {
+      $ionicLoading.show({
+        template:"<ion-spinner icon='ios'></ion-spinner>",
+        duration:2000
+      })
+
+    });
+    </script>
+<style type="text/css">
+    /*body {*/
+      /*cursor: url('http://www.runob.com/try/demo_source/finger.png'), auto;*/
+    /*}*/
+    p {
+      /*text-align: center;*/
+      margin-bottom: 40px !important;
+      font-size: 25px;
+      /*background-color: #4cd964;*/
+    }
+    .spinner svg {
+      /*width: 19% !important;*/
+      /*height: 85px !important;*/
+      width: 85px !important;
+      height: 85px !important;
+      vertical-align:middle;
+    }
+  .spin {
+    text-align:center;
+    line-height:100px;
+    font-size: 50px;
+    background-color: #65d6ef;
+  }
+    </style>
+</head>
+<body ng-controller="MyCtrl">
+<ion-content scroll="false" class="has-header">
+  <p><ion-spinner icon="android"></ion-spinner>这里是中文!</p>
+  <div class="spin"><ion-spinner icon="android" class="assertive-bg"></ion-spinner>Hello!!!</div>
+<p>
+<ion-spinner icon="android"></ion-spinner>
+<ion-spinner icon="ios"></ion-spinner>
+<ion-spinner icon="ios-small"></ion-spinner>
+<ion-spinner icon="bubbles" class="spinner-balanced"></ion-spinner>
+<ion-spinner icon="circles" class="spinner-energized"></ion-spinner>
+</p>
+<p>
+<ion-spinner icon="crescent" class="spinner-royal"></ion-spinner>
+<ion-spinner icon="dots" class="spinner-dark"></ion-spinner>
+<ion-spinner icon="lines" class="spinner-calm"></ion-spinner>
+<ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>
+<ion-spinner icon="spiral"></ion-spinner>
+</p>
+</ion-content>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<ion-view view-title="群聊" hide-nav-bar="true">
+<!--<ion-header-bar>用这个会有个缝隙。。。-->
+  <div class="bar bar-header hide-on-keyboard-open keyboard-attach="keyboardAttach(）">
+    <h1 class="title">群聊</h1>
+  </div>
+  <div class="bar bar-subheader item-input-inset" ng-model="">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input ng-model="inputText" type="search" placeholder="输入账号/姓名/昵称">
+    </label>
+    <button class="button button-clear">
+      取消
+    </button>
+  </div>
+<!--</ion-header-bar>-->
+
+  <ion-content>
+    <ion-list class="hide-on-keyboard-open">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>
